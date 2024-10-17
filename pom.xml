@@ -72,8 +72,9 @@
 				<version>3.2.1</version>
 				<configuration>
 						<skipTests>false</skipTests> <!-- Ensure tests are not skipped -->
-					<argLine>@{argLine} -Xshare:off</argLine>
-					<parallel>all</parallel>
+					<argLine>@{argLine} -Xmx1024m -Xms512m -Xshare:off</argLine>
+					<forkCount>1</forkCount> <!-- Begränsa till en JVM-process -->
+					<reuseForks>true</reuseForks>
 				</configuration>
 			</plugin>
 
