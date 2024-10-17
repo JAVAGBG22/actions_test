@@ -71,6 +71,7 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>3.2.1</version>
 				<configuration>
+						<skipTests>false</skipTests> <!-- Ensure tests are not skipped -->
 					<argLine>@{argLine} -Xshare:off</argLine>
 					<parallel>all</parallel>
 				</configuration>
